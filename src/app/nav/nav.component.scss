@@ -1,0 +1,89 @@
+@import '/src/sass/variables';
+
+
+
+nav {
+  border: 1px solid transparent;
+  border-bottom: 1px solid white;
+  background: #dedede;
+
+  ul {
+    display: flex;
+
+    li {
+      list-style: none;
+      padding: 5px 10px;
+      margin: 0;
+      padding: 0;
+      
+      a {
+        display: block;
+        text-decoration: none;
+        line-height: 40px;
+        padding: 5px 10px;
+        
+        &:link, &:visited, &:active {
+          color: black;
+        }
+
+        &.is-active {
+          color: $primary-color;
+        }
+        
+        &:hover{
+          // background-color: lighten($color: $primary-color, $amount: 00);
+          
+          box-sizing: content-box;
+          color: $primary-color;
+        }
+
+
+      }
+
+      ul {
+        position: absolute;
+        border: 1px solid lightgrey;
+        background: white;
+        display: none;
+        
+
+        li {
+          
+          a {
+            line-height: 20px;
+
+            &.is-active:before {
+              // text-indent: 0px;
+              content: "• "
+            }
+          }
+
+        }
+      }
+
+      // Inner sub-menu hover
+      &:hover {
+        ul {
+          display: block;
+          
+          li {
+            a:hover {
+              text-indent: 5px;
+              
+              &.is-active {
+                text-indent: 0px;
+              }
+            }
+          }
+        }
+      }
+
+    }
+
+    img {
+      height: 30px;
+      vertical-align: middle;
+    }
+  }
+}
+

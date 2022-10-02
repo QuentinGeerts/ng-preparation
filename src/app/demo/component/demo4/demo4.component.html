@@ -1,0 +1,11 @@
+<div class="section-component">
+  <h3>Demo 4 : Attribute Binding</h3>
+
+  <p><input type="text" [(ngModel)]="myProp"></p>
+
+  <p><button (click)="changeValue()" [disabled]="bool">Clique ici</button></p>
+  <p><button (click)="changeValue()" [disabled]="myProp < 5">Clique ici</button></p>
+
+  <p><a [href]="url">Vers Google</a></p>
+
+</div>

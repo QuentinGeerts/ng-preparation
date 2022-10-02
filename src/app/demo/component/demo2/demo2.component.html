@@ -1,0 +1,19 @@
+<div class="section-component">
+  <h3>Demo 2 : Two-Way Binding</h3>
+
+  <h4>Chaine de caractères :</h4>
+  <p>Valeur de maVariable1 : {{ maVariable1 }}</p>
+  <input type="text" [(ngModel)]="maVariable1">
+
+  <!-- Après avoir vu l'Event Binding -->
+  <!-- <p><input type="text" [value]="maVariable1" (keypress)="changeValue($event)"></p> -->
+  
+  <h4>Nombre :</h4>
+  <p>Valeur de maVariable2 : {{ maVariable2 }}</p>
+  <p><input type="number" [(ngModel)]="maVariable2"></p>
+
+  <h4>Booléen :</h4>
+  <p>Valeur de maVariable3 : {{ maVariable3 }}</p>
+  <p><input type="checkbox" [(ngModel)]="maVariable3"></p>
+
+</div>
