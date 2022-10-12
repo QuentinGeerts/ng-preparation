@@ -1,4 +1,15 @@
 <div class="section-component">
   <h3>Demo 8 : Input / Output</h3>
 
+  <div>
+    Contenu du composant parent
+    <p>Propriété from children : {{ myProp }}</p>
+  </div>
+
+  <app-enfant title="Titre pour l'enfant" [message]="message" (monEvent)="reactToChildren($event)">
+
+    <p>Contenu de l'enfant définit dans l'appel côté parent</p>
+
+  </app-enfant>
+
 </div>

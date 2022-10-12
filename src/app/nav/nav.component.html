@@ -34,5 +34,8 @@
 			</ul>
 		</li>
 		<li><a routerLink="404">Page introuvable</a></li>
+
+		<li *ngIf="!isConnected"><a (click)="login()">Connexion</a></li>
+		<li *ngIf="isConnected"><a (click)="logout()">Déconnexion</a></li>
 	</ul>
 </nav>

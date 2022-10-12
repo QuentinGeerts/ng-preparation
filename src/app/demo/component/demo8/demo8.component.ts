@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Demo8Component implements OnInit {
 
-  constructor() { }
+  myProp!: string;
+  message!: string;
 
-  ngOnInit(): void {
+  constructor () { }
+
+  ngOnInit (): void {
+    this.myProp = "En attente du children...";
+    this.message = "Mon message pour l'enfant";
+  }
+
+  reactToChildren (s: string) {
+    this.myProp = s;
   }
 
 }

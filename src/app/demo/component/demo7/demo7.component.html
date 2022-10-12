@@ -1,4 +1,48 @@
 <div class="section-component">
   <h3>Demo 7 : Structural Directives</h3>
 
+  <h4>NgIf</h4>
+
+  <div (click)="toggle()">
+    <p style="cursor: pointer;">Clique ici</p>
+  </div>
+
+  <div *ngIf="isToggled;  else elseblock">
+    <p>
+      Lorem ipsum dolor sit amet.
+    </p>
+  </div>
+  
+  <ng-template #elseblock>
+    <div>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere debitis hic tenetur corrupti quam nesciunt laborum non ipsum ex excepturi eligendi assumenda, dolores sunt quod possimus, veniam natus sed quas.
+      </p>
+    </div>
+  </ng-template>
+
+  <hr>
+
+  <h4>NgFor</h4>
+
+  <ul>
+    <li *ngFor="let fruit of liste; let i = index; let pair = even">
+      <p [ngClass]="{classe: pair}">{{i}} - {{ fruit }}</p>
+    </li>
+  </ul>
+
+  <hr>
+
+  <h4>NgSwitch</h4>
+
+  <input type="text" [(ngModel)]="inputValue">
+
+  <div [ngSwitch]="inputValue">
+    <p *ngSwitchCase="1">Pomme</p>
+    <p *ngSwitchCase="2">Poire</p>
+    <p *ngSwitchCase="3">Pêche</p>
+    <p *ngSwitchDefault>Entrez 1, 2 ou 3</p>
+  </div>
+
+
 </div>

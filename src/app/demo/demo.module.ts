@@ -6,7 +6,7 @@ import { DemoComponent } from './demo.component';
 import { Demo1Component } from './component/demo1/demo1.component';
 import { Demo2Component } from './component/demo2/demo2.component';
 import { Demo3Component } from './component/demo3/demo3.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Demo4Component } from './component/demo4/demo4.component';
 import { Demo5Component } from './component/demo5/demo5.component';
 import { Demo6Component } from './component/demo6/demo6.component';
@@ -20,6 +20,7 @@ import { Demo13Component } from './component/demo13/demo13.component';
 import { Demo14Component } from './component/demo14/demo14.component';
 import { Demo15Component } from './component/demo15/demo15.component';
 import { Demo16Component } from './component/demo16/demo16.component';
+import { EnfantComponent } from './component/demo8/enfant/enfant.component';
 
 @NgModule({
   declarations: [
@@ -40,11 +41,13 @@ import { Demo16Component } from './component/demo16/demo16.component';
     Demo14Component,
     Demo15Component,
     Demo16Component,
+    EnfantComponent,
   ],
   imports: [
     CommonModule,
     DemoRoutingModule,
     FormsModule,
+    ReactiveFormsModule
   ],
   bootstrap: [DemoComponent]
 })

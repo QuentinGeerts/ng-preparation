@@ -1,4 +1,9 @@
 <div class="section-component">
   <h3>Demo 9 : Service et Injection</h3>
 
+  <p>Status : {{ isConnected ? "Connecté" : "Déconnecté" }}</p>
+
+  <button (click)="login()" *ngIf="!isConnected">Connexion</button>
+  <button (click)="logout()" *ngIf="isConnected">Déconnexion</button>
+
 </div>
