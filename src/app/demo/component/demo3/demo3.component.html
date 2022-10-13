@@ -3,6 +3,11 @@
 
   <h4>(click) Event</h4>
 
-  <p></p>
+  <p>Clique sur le bouton : {{maVariable}}</p>
+  <button (click)="maMethode('Nouveau texte')">Clique ici</button>
 
+  <p>Survole le bouton ci-dessous : </p>
+  <button (mouseenter)="disableButton($event)">Essaie de cliquer sur moi</button>
+
+  <p>Tu peux copier le texte ! <button (click)="copyText($event)">Copy</button></p>
 </div>

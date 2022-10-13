@@ -12,7 +12,6 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { NavComponent } from './nav/nav.component';
-import { NotFoundComponent } from './not-found/not-found.component';
 import { FormsModule } from '@angular/forms';
 
 // Décorateur
@@ -26,7 +25,6 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     AboutComponent,
     NavComponent,
-    NotFoundComponent
   ],
 
   // Modules importés et utilisés dans l'application

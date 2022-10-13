@@ -21,4 +21,15 @@ export class Demo3Component implements OnInit {
     this.maVariable = texte;
   }
 
+  disableButton(event: Event): void {
+    console.log("Enter");
+    (event.target as HTMLButtonElement).disabled = true
+  }
+
+  copyText(event: Event) {
+   this
+  }
+
+  
+
 }
