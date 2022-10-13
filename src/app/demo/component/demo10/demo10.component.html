@@ -1,4 +1,29 @@
 <div class="section-component">
   <h3>Demo 10 : Formulaires</h3>
 
+  <form [formGroup]="myForm">
+
+    <p>
+      <label for="email">Email :</label>
+      <input type="email" name="email" id="email" formControlName="email">
+      <br>
+      <label *ngIf="!myForm.get('email')!.valid">L'email n'est pas valide.</label>
+    </p>
+
+    <p>
+      <label for="login">Login :</label>
+      <input type="text" name="login" id="login">
+    </p>
+
+    <h4>FormArray</h4>
+    <button type="button" (click)="addControl()">+</button>
+
+    <div formArrayName="film">
+      <p *ngFor="let c of getArray().controls; let i = index">
+          <input type="text" [formControlName]="i">
+      </p>
+  </div>
+
+  </form>
+
 </div>

@@ -11,6 +11,14 @@ export class Demo1Component implements OnInit {
   maVariable2: number = 15;
   declare maVariable3: boolean; // ambient declaration
 
+  maVariable4: null = null;
+
+  maVariable5: undefined = undefined;
+
+  maVariable6: any[] = ["Chaine de caractères", 12, true, () => { console.log("Heyo"); }];
+
+  maVariable7: [string, number] = ["", 3]; // Tuple
+
   constructor () { }
 
   ngOnInit (): void {

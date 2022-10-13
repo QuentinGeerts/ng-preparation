@@ -7,9 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Demo7Component implements OnInit {
 
-  constructor() { }
+  isToggled: boolean = true;
+  liste!: string[];
+  inputValue!: string;
 
-  ngOnInit(): void {
+  constructor () { }
+
+  ngOnInit (): void {
+    this.liste = [
+      "pomme", "poire", "pêche", "prune", "papaye", "orange", "pamplemousse"
+    ]
+    this.inputValue = "";
+  }
+
+  toggle () {
+    this.isToggled = !this.isToggled;
   }
 
 }
