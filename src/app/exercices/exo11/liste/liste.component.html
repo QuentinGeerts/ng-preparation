@@ -1,0 +1,5 @@
+<h3>Panier</h3>
+
+<p *ngFor="let item of listFromChild; let i = index;">
+    {{ item }} <button (click)="remove(i)">❌</button>
+</p>

@@ -1,0 +1,17 @@
+<h2>Exercice 11 - Shopping List</h2>
+
+<p>Mettre en place une shopping list en deux composant.</p>
+<p>Dans le premier, un champ texte permettant l'ajout d'un article à la liste</p>
+<p>Dans le deuxième, l'affichage de la liste et la possibilité de supprimer un article.</p>
+<p>Les deux composant doivent être afficher sur la même page</p>
+
+<hr>
+
+<h3>Liste de course</h3>
+
+<input type="text" [(ngModel)]="article">
+<button (click)="addItem()">Ajouter</button>
+
+<p>{{ listFromParent | json }}</p>
+
+<app-liste [listFromChild]="listFromParent" (emitDelete)="removeItem($event)"/>
