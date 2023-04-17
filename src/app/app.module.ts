@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { FourofourComponent } from './shared/fourofour/fourofour.component';
@@ -90,7 +90,8 @@ import { ChildComponent } from './demos/demo13/child/child.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule // Important pour le fonctionnement du Two-Way Binding
+    FormsModule, // Important pour le fonctionnement du Two-Way Binding
+    ReactiveFormsModule, // Important pour le fonctionnement du FormGroup
   ],
   providers: [],
   bootstrap: [AppComponent]

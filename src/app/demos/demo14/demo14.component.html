@@ -1,1 +1,97 @@
-<p>demo14 works!</p>
+<h2>Demo 14 - Les formulaires (Validators)</h2>
+
+<h3>Avec Two Way Bindings</h3>
+
+<div class="container">
+
+    <div class="dblock">
+        <label for="name">Name : {{ name }}</label>
+        <input type="text" id="name" [(ngModel)]="name">
+    </div>
+
+    <div class="dblock">
+        <label for="email">Email : {{ email }}</label>
+        <input type="text" id="email" [(ngModel)]="email">
+    </div>
+
+    <div class="dblock">
+        <label for="password">Password : {{ password }}</label>
+        <input type="text" id="password" [(ngModel)]="password">
+    </div>
+
+    <div class="dblock">
+        <label for="gender">Gender : {{ gender }}</label>
+        <select id="gender" [(ngModel)]="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select>
+    </div>
+
+    <button
+        *ngIf="name && email && password && gender"
+        (click)="send()"
+    >
+        Envoyer
+    </button>
+    
+</div>
+
+
+<h3>Avec Validators</h3>
+
+<div class="container">
+    <form [formGroup]="myForm">
+        <div class="dblock">
+            <label for="name">Name :</label>
+            <input type="text" name="name" id="name" formControlName="name">
+
+            <span *ngIf=" myForm.controls['name'].touched && !myForm.controls['name'].valid">Requis + caractères entre 3
+                et 20</span>
+        </div>
+        <div class="dblock">
+            <label for="email">Email :</label>
+            <input type="email" name="email" id="email" formControlName="email">
+            <span *ngIf=" myForm.controls['email'].touched && !myForm.controls['email'].valid">Requis + email
+                format</span>
+
+        </div>
+        <div class="dblock">
+            <label for="password">Password :</label>
+            <input type="password" name="password" id="password" formControlName="password">
+            <span *ngIf=" myForm.controls['password'].touched && !myForm.controls['password'].valid">Requis + caractères
+                entre 6 et 15</span>
+
+        </div>
+        <div class="dblock">
+            <label for="gender">Gender :</label>
+            <select formControlName="gender" id="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+            <span *ngIf=" myForm.controls['gender'].touched && !myForm.controls['gender'].valid">Requis </span>
+        </div>
+        <button *ngIf="myForm.valid" (click)="sendFG()">Envoyer
+        </button>
+
+        <br><br><br>
+
+        Form Control (abtractControl)
+        <span *ngIf="myForm.pristine">(pristine)</span>
+        <span *ngIf="myForm.touched">(touched)</span>
+        <span *ngIf="myForm.invalid">(invalid)</span>
+        <span *ngIf="myForm.valid">(valid)</span>
+
+        <br><br><br>
+
+        Form Control Individual (control)
+
+        <span *ngIf="myForm.controls['name'].valid">Name: (valid)</span>
+        <span *ngIf="myForm.controls['email'].valid">Email: (valid)</span>
+        <span *ngIf="myForm.controls['password'].valid">Password: (valid)</span>
+        <span *ngIf="myForm.controls['gender'].valid">Gender: (valid)</span>
+
+    </form>
+
+</div>
