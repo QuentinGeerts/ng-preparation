@@ -8,6 +8,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class Demo14Component {
 
+  // Avec utilisation du TWB
   name: string = '';
   email: string = '';
   password: string = '';
@@ -33,7 +34,7 @@ export class Demo14Component {
     console.log(this.gender);
   }
 
-  sendFG(): void {
+  sendFG (): void {
     console.log(this.myForm.valid);
     console.log(this.myForm.controls['name'].valid);
     console.log(this.myForm.controls['name'].value);
