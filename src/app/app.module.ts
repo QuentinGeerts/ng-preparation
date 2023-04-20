@@ -45,6 +45,18 @@ import { Demo15Component } from './demos/demo15/demo15.component';
 import { Demo16Component } from './demos/demo16/demo16.component';
 import { Demo17Component } from './demos/demo17/demo17.component';
 import { ChildComponent } from './demos/demo13/child/child.component';
+import { Demo18Component } from './demos/demo18/demo18.component';
+import { Demo19Component } from './demos/demo19/demo19.component';
+import { Demo20Component } from './demos/demo20/demo20.component';
+import { Demo21Component } from './demos/demo21/demo21.component';
+import { Demo17guardedComponent } from './demos/demo17/demo17guarded/demo17guarded.component';
+import { Exo05Component } from './exercices/exo05/exo05.component';
+import { Exo07Component } from './exercices/exo07/exo07.component';
+import { ChronoPipe } from './exercices/exo07/chrono.pipe';
+import { Exo06Component } from './exercices/exo06/exo06.component';
+import { Exo08Component } from './exercices/exo08/exo08.component';
+import { Exo09Component } from './exercices/exo09/exo09.component';
+import { Exo10Component } from './exercices/exo10/exo10.component';
 
 @NgModule({
   declarations: [
@@ -86,6 +98,18 @@ import { ChildComponent } from './demos/demo13/child/child.component';
     Demo16Component,
     Demo17Component,
     ChildComponent,
+    Demo18Component,
+    Demo19Component,
+    Demo20Component,
+    Demo21Component,
+    Demo17guardedComponent,
+    Exo05Component,
+    Exo07Component,
+    ChronoPipe,
+    Exo06Component,
+    Exo08Component,
+    Exo09Component,
+    Exo10Component,
   ],
   imports: [
     BrowserModule,

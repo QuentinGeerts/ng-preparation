@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./exo02.component.scss']
 })
 export class Exo02Component {
-
+  nom: string = '';
+  prenom: string = '';
+  dateNaissance!: Date;
+  genre: string = '';
+  langues: string = '';
+  image?: string;
 }

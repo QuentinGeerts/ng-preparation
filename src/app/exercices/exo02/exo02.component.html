@@ -7,3 +7,42 @@
 <p>Reprennez les différents champs de l'exercice 01 en y personnalisant certains.</p>
 
 <hr>
+
+<div class="d-flex flex-justify-content-center">
+    <div class="dblock border p-20 m-10">
+
+        <label>Nom :</label>
+        <input type="text" [(ngModel)]="nom">
+
+        <label>Prénom :</label>
+        <input type="text" [(ngModel)]="prenom">
+
+        <label>Date de naissance :</label>
+        <input type="date" [(ngModel)]="dateNaissance">
+
+        <label>Genre :</label>
+        <select [(ngModel)]="genre">
+            <option value="homme">Homme</option>
+            <option value="femme">Femme</option>
+            <option value="autre">Autre</option>
+        </select>
+
+        <label>Langue : (plusieurs, séparé par une virgule)</label>
+        <input type="text" [(ngModel)]="langues">
+
+        <label>Image : </label>
+        <input type="text" [(ngModel)]="image">
+
+    </div>
+
+    <div class="dblock border p-20 m-10 flex-fill">
+        <h3>{{ nom }} {{ prenom }}</h3>
+
+        <img src="{{ image }}" >
+        <p>Date de naissance : {{ dateNaissance }}</p>
+        <p>Genre : {{ genre }}</p>
+
+        <p>Langue : {{ langues }}</p>
+        
+    </div>
+</div>

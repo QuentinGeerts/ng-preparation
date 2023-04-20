@@ -1,4 +1,4 @@
-<h2>Exercice 03 - Le chronomètre</h2>
+<h2>Exercice 03 - Le chronomètre (basique)</h2>
 
 <p>Créer une application qui permet de gérer un chronomètre.</p>
 <p>Vous pouvez le démarrer, mettre sur pause et le reset.</p>
@@ -6,8 +6,8 @@
 
 <hr>
 
-<p>Temps : {{ temps }}</p>
+<p>Temps : {{ count }}</p>
 
-<button nbButton (click)="start()">Start</button>
-<button nbButton (click)="stop()">Stop</button>
-<button nbButton (click)="reset()">Reset</button>
+<button (click)="start()">Start</button>
+<button (click)="stop()">Stop</button>
+<button (click)="reset()">Reset</button>

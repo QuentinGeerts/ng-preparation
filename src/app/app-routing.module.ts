@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { FourofourComponent } from './shared/fourofour/fourofour.component';
 
+import { DemosComponent } from './demos/demos.component';
 import { Demo01Component } from './demos/demo01/demo01.component';
 import { Demo02Component } from './demos/demo02/demo02.component';
 import { Demo03Component } from './demos/demo03/demo03.component';
@@ -15,19 +16,31 @@ import { Demo08Component } from './demos/demo08/demo08.component';
 import { Demo09Component } from './demos/demo09/demo09.component';
 import { Demo10Component } from './demos/demo10/demo10.component';
 import { Demo11Component } from './demos/demo11/demo11.component';
-
-import { Exo01Component } from './exercices/exo01/exo01.component';
-import { Exo02Component } from './exercices/exo02/exo02.component';
-import { Exo03Component } from './exercices/exo03/exo03.component';
-import { Exo11Component } from './exercices/exo11/exo11.component';
-import { DemosComponent } from './demos/demos.component';
-import { ExercicesComponent } from './exercices/exercices.component';
 import { Demo12Component } from './demos/demo12/demo12.component';
 import { Demo13Component } from './demos/demo13/demo13.component';
 import { Demo14Component } from './demos/demo14/demo14.component';
 import { Demo15Component } from './demos/demo15/demo15.component';
 import { Demo16Component } from './demos/demo16/demo16.component';
 import { Demo17Component } from './demos/demo17/demo17.component';
+import { Demo17guardedComponent } from './demos/demo17/demo17guarded/demo17guarded.component';
+import { LoginGuard } from './demos/demo17/guard/login.guard';
+import { Demo18Component } from './demos/demo18/demo18.component';
+import { Demo19Component } from './demos/demo19/demo19.component';
+import { Demo20Component } from './demos/demo20/demo20.component';
+import { Demo21Component } from './demos/demo21/demo21.component';
+
+import { ExercicesComponent } from './exercices/exercices.component';
+import { Exo01Component } from './exercices/exo01/exo01.component';
+import { Exo02Component } from './exercices/exo02/exo02.component';
+import { Exo03Component } from './exercices/exo03/exo03.component';
+import { Exo04Component } from './exercices/exo04/exo04.component';
+import { Exo05Component } from './exercices/exo05/exo05.component';
+import { Exo06Component } from './exercices/exo06/exo06.component';
+import { Exo07Component } from './exercices/exo07/exo07.component';
+import { Exo08Component } from './exercices/exo08/exo08.component';
+import { Exo09Component } from './exercices/exo09/exo09.component';
+import { Exo10Component } from './exercices/exo10/exo10.component';
+import { Exo11Component } from './exercices/exo11/exo11.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -50,7 +63,19 @@ const routes: Routes = [
       { path: 'demo14', component: Demo14Component },
       { path: 'demo15', component: Demo15Component },
       { path: 'demo16', component: Demo16Component },
-      { path: 'demo17', component: Demo17Component },
+      {
+        path: 'demo17', children: [
+          { path: '', component: Demo17Component },
+          { path: 'demo17guarded', component: Demo17guardedComponent, canActivate: [LoginGuard] }
+        ]
+      },
+      { path: 'demo18', component: Demo18Component },
+      { path: 'demo19', component: Demo19Component },
+      { path: 'demo20', component: Demo20Component },
+      { path: 'demo21', component: Demo21Component },
+
+      { path: 'routage', component: Demo16Component },
+      { path: 'routage/:id', component: Demo16Component },
     ]
   },
   {
@@ -59,6 +84,13 @@ const routes: Routes = [
       { path: 'exo01', component: Exo01Component },
       { path: 'exo02', component: Exo02Component },
       { path: 'exo03', component: Exo03Component },
+      { path: 'exo04', component: Exo04Component },
+      { path: 'exo05', component: Exo05Component },
+      { path: 'exo06', component: Exo06Component },
+      { path: 'exo07', component: Exo07Component },
+      { path: 'exo08', component: Exo08Component },
+      { path: 'exo09', component: Exo09Component },
+      { path: 'exo10', component: Exo10Component },
       { path: 'exo11', component: Exo11Component },
     ]
   },

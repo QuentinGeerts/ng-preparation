@@ -1,0 +1,33 @@
+<h2>Exercice 09 - Panier de courses</h2>
+
+<p>Créer une application qui permet à l'utilisateur de saisir un nom d'article et une quantité</p>
+<p>L'application doit pouvoir également afficher la liste des articles avec la quantité et la date d'ajout. (formatée)
+</p>
+
+<p>L'utilisateur peut également supprimer un élément de la liste.</p>
+
+<p>Utilisez le model fournis pour réaliser l'exercice.</p>
+
+<hr>
+
+<div class="dblock">
+    <label>Nom du produit :</label>
+    <input type="text" [(ngModel)]="product_name">
+
+    <label>Quantité :</label>
+    <input type="number" min="1" [(ngModel)]="product_qty">
+
+    <button (click)="addProduct()">Ajouter</button>
+</div>
+
+<h3>Liste de courses</h3>
+
+<ul *ngIf="cart.length > 0;else errorMessage">
+    <li *ngFor="let item of cart; let i = index">
+        {{item.name}} : <button>-</button>{{item.qty}}<button>+</button> ({{item.dateAdd | date : "dd/MM/yyyy à HH:mm:ss"}})<button>❌</button>
+    </li>
+</ul>
+
+<ng-template #errorMessage>
+    <p>Il n'y a pas encore d'article, utiliser le formulaire ci-dessus pour en ajouter !</p>
+</ng-template>
