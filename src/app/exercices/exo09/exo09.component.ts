@@ -19,17 +19,30 @@ export class Exo09Component {
     if (!this.product_name || this.product_name.trim().length <= 0) return;
     if (this.product_qty < 1) return;
 
-    let index: number = this.cart.findIndex(a => a.name === this.product_name);
+    let index: number = this.cart.findIndex(a => a.name.trim().toLocaleLowerCase() === this.product_name.trim().toLowerCase());
 
-    if (index < 0) 
+    if (index < 0)
       this.cart.push({ name: this.product_name.trim(), qty: this.product_qty, dateAdd: new Date() });
-    else 
-      this.cart[index].qty ++;
+    else
+      this.cart[index].qty += this.product_qty;
 
     this.product_name = '';
     this.product_qty = 1;
+
+    document.getElementById('product_name')?.focus();
   }
 
+  removeProduct (article: Article): void {
+    this.cart = this.cart.filter(a => a != article);
+  }
 
+  increase (index: number): void {
+    this.cart[index].qty++;
+  }
+
+  decrease (index: number): void {
+    this.cart[index].qty--;
+    if (this.cart[index].qty === 0) this.removeProduct(this.cart[index]);
+  }
 
 }
