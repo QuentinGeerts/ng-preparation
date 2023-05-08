@@ -53,6 +53,11 @@ hr {
 
 // layout
 
+.content {
+    padding: 10px auto;
+    border: var(--text);
+}
+
 .container {
     max-width: 1200px;
     display: block;
