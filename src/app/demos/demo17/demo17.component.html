@@ -1,1 +1,12 @@
-<p>demo17 works!</p>
+<h2>Demo 17 - Les Guards</h2>
+
+<p>
+    Gestion des accès à la page
+</p>
+
+<button *ngIf="!isConnected" (click)="login()">Login</button>
+<button *ngIf="isConnected" (click)="logout()">Logout</button>
+
+<p>
+    <a routerLink="/demos/demo17/demo17guarded">Se rendre sur la page Guard</a>
+</p>

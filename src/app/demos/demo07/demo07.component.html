@@ -10,6 +10,7 @@
 
 <h3>Transformation d'un nombre en jours heures minutes et secondes</h3>
 
+<input type="number" [(ngModel)]="nbSecondes">
 <p>Nombre original : {{ nbSecondes }}</p>
 <p>Nombre custom pipé en jours heures minutes et secondes : {{ nbSecondes | customPipe }}</p>
 

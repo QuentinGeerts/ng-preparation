@@ -1,2 +1,20 @@
 <h2>Demo 12 - Services et Injection de dépendances</h2>
 
+
+<p>État de connexion : {{ isConnected ? 'Connecté' : 'Déconnecté' }}</p>
+
+
+<div *ngIf="!isConnected" class="dblock">
+
+    <p *ngIf="message">{{ message }}</p>
+
+    <label>Identifiant :</label>
+    <input type="text" [(ngModel)]="username">
+    
+    <label>Mot de passe :</label>
+    <input type="password" [(ngModel)]="password">
+
+    <button (click)="logIn()">Connexion</button>
+
+</div>
+<button *ngIf="isConnected" (click)="logOut()">Déconnexion</button>
