@@ -4,7 +4,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { FourofourComponent } from './shared/fourofour/fourofour.component';
 
-import { DemosComponent } from './demos/demos.component';
 import { Demo01Component } from './demos/demo01/demo01.component';
 import { Demo02Component } from './demos/demo02/demo02.component';
 import { Demo03Component } from './demos/demo03/demo03.component';
@@ -28,6 +27,7 @@ import { Demo18Component } from './demos/demo18/demo18.component';
 import { Demo19Component } from './demos/demo19/demo19.component';
 import { Demo20Component } from './demos/demo20/demo20.component';
 import { Demo21Component } from './demos/demo21/demo21.component';
+import { DemosComponent } from './demos/demos.component';
 
 import { ExercicesComponent } from './exercices/exercices.component';
 import { Exo01Component } from './exercices/exo01/exo01.component';
