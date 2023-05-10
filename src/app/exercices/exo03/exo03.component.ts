@@ -11,10 +11,8 @@ export class Exo03Component {
   count: number = 0;
 
   start (): void {
-    this.stop();
-    this.timer = setInterval(() => {
-      this.count++;
-    }, 1000);
+    if (this.timer) return;
+    this.timer = setInterval(() => { this.count++; }, 1000);
   }
 
   stop (): void {

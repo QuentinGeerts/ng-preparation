@@ -1,0 +1,33 @@
+<h2>Exercice 07 - Convertisseur de degré</h2>
+
+<p>
+    Créer une application qui permet de convertir une température de °C à °F et inversément.
+</p>
+
+<p>
+    Deux pipes, un "toFahrenheit" et "toCelsius" qui permettent de convertir une température vers une unité spécifique.
+</p>
+
+<p>Un pipe universel qui permet de convertir vers l'unité souhaité en paramètre du pipe.</p>
+
+<hr>
+
+<h3>To Fahrenheit :</h3>
+
+<input type="number" [(ngModel)]="temperature1">
+<p>{{ temperature1 }} °C => {{ temperature1 | toFahrenheit }} °F</p>
+
+<h3>To Celsius :</h3>
+
+<input type="number" [(ngModel)]="temperature2">
+<p>{{ temperature2 }} °F => {{ temperature2 | toCelsius | number : '1.2-2' }} °C</p>
+
+<h3>Convertisseur Universel</h3>
+
+<input type="number" [(ngModel)]="temperature3">
+<select [(ngModel)]="unite">
+    <option value="celsius">Celsius</option>
+    <option value="fahrenheit">Fahrenheit</option>
+</select>
+
+<p>Valeur convertie : {{ temperature3 | convertisseurDegre : unite | number : '1.2-2' }}</p>

@@ -2,7 +2,8 @@
 
 <div class="container">
     <p>
-        Vous devez créer une application Angular pour permettre aux utilisateurs de créer leur propre profil personnel. <br>
+        Vous devez créer une application Angular pour permettre aux utilisateurs de créer leur propre profil personnel.
+        <br>
         L'application doit contenir les champs suivants :
     </p>
 
@@ -19,6 +20,8 @@
 <hr>
 
 <h1>{{ genre === 'homme' ? 'Mr.' : 'Mme' }} {{nom}} {{prenom}}</h1>
+
+<p>Contactez moi à {{ email }}</p>
 
 <p>Né le {{ dateNaissance.toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' }) }}</p>
 

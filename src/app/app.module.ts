@@ -57,6 +57,10 @@ import { Exo07Component } from './exercices/exo07/exo07.component';
 import { Exo08Component } from './exercices/exo08/exo08.component';
 import { Exo09Component } from './exercices/exo09/exo09.component';
 import { Exo10Component } from './exercices/exo10/exo10.component';
+import { Exo07dot2Component } from './exercices/exo07dot2/exo07dot2.component';
+import { ToCelsiusPipe } from './exercices/exo07dot2/to-celsius.pipe';
+import { ToFahrenheitPipe } from './exercices/exo07dot2/to-fahrenheit.pipe';
+import { ConvertisseurDegrePipe } from './exercices/exo07dot2/convertisseur-degre.pipe';
 
 @NgModule({
   declarations: [
@@ -110,6 +114,10 @@ import { Exo10Component } from './exercices/exo10/exo10.component';
     Exo08Component,
     Exo09Component,
     Exo10Component,
+    Exo07dot2Component,
+    ToCelsiusPipe,
+    ToFahrenheitPipe,
+    ConvertisseurDegrePipe,
   ],
   imports: [
     BrowserModule,
