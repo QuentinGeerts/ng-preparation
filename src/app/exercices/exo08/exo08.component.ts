@@ -1,38 +1,39 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-exo08',
   templateUrl: './exo08.component.html',
   styleUrls: ['./exo08.component.scss']
 })
-export class Exo08Component {
+export class Exo08Component implements OnInit {
 
   min: number = 50;
   max: number = 250;
 
-  longueur: number = 50;
-  largeur: number = 50;
-  couleur: string = "#000000";
-
+  height: number = 50;
+  width: number = 50;
+  color: string = '#FFFFFF';
   borderWidth: number = 1;
+  borderColor: string = '#000000';
+  borderStyle: string = 'solid';
 
   isCircle: boolean = false;
 
-  style: any = {
-    'width': this.largeur + 'px',
-    'height': this.longueur + 'px',
-    'background-color': this.couleur,
+  style: any;
 
-    'border': this.borderWidth + 'px solid black',
-  };
+  ngOnInit (): void {
+    this.update();
+  }
 
   update (): void {
     this.style = {
-      'width': this.largeur + 'px',
-      'height': this.longueur + 'px',
-      'background-color': this.couleur,
+      'width': this.width + 'px',
+      'height': this.height + 'px',
+      'background-color': this.color,
 
-      'border': this.borderWidth + 'px solid black'
+      'border-width': this.borderWidth + 'px',
+      'border-color': this.borderColor,
+      'border-style': this.borderStyle
     };
   }
 
