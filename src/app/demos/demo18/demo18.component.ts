@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { ListeService } from './liste.service';
 
 @Component({
   selector: 'app-demo18',
@@ -8,12 +7,6 @@ import { ListeService } from './liste.service';
 })
 export class Demo18Component {
 
-  liste: string[] = [];
-
-  constructor (private _listeService: ListeService) { }
-
-  ngOnInit (): void {
-    this.liste = this._listeService.getAll();
-  }
+  constructor () { }
 
 }

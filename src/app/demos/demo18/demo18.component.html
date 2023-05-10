@@ -1,5 +1,13 @@
-<h2>Demo 19 - Resolver</h2>
+<h2>Demo 18 - Resolver</h2>
 
-<p *ngFor="let item of liste; let i = index">
-    <a [routerLink]="['../res']">{{ item }}</a>
+<p>
+    En Angular, les resolvers sont des fonctions qui permettent de pré-charger des données avant que la vue associée
+    soit rendue. Ils sont souvent utilisés pour résoudre des données asynchrones telles que des données provenant d'une
+    API.
+</p>
+
+<p>
+    Le rôle principal des resolvers est de s'assurer que les données nécessaires à la vue sont disponibles avant que
+    celle-ci ne soit rendue. Cela permet d'éviter des problèmes de rendu de la vue avec des données manquantes ou
+    incomplètes.
 </p>
