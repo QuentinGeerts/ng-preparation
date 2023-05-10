@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class Exo04Component {
 
+  passwordType: string = 'password';
+
+  toggleVisiblePassword (): void {
+
+    if (this.passwordType === 'password') this.passwordType = 'text';
+    else this.passwordType = 'password';
+
+  }
+
 }

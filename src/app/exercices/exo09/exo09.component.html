@@ -10,6 +10,8 @@
 
 <hr>
 
+<h3>Ajouter un produit</h3>
+
 <div class="dblock">
     <label>Nom du produit :</label>
     <input type="text" [(ngModel)]="product_name" id="product_name">
@@ -24,7 +26,7 @@
 
 <ul *ngIf="cart.length > 0;else errorMessage">
     <li *ngFor="let item of cart; let i = index">
-        <button (click)="removeProduct(item)">❌</button> 
+        <button (click)="removeProduct(item)">❌</button>
         {{ item.name }} : {{ item.qty }} ({{ item.dateAdd | date : "dd/MM/yyyy à HH:mm:ss" }})
         <button (click)="decrease(i)">-</button>
         <button (click)="increase(i)">+</button>

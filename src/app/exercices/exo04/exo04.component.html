@@ -1,8 +1,22 @@
 <h2>Exercice 04 - Toggle password</h2>
 
 <p>
-    Créer une application qui affiche un formation de connexion où l'utilisateur peut rendre visible son mot de passe ou
-    non.
+    Créer une application qui affiche un formulaire de connexion où l'utilisateur peut rendre visible son mot de passe
+    ou non.
 </p>
 
 <hr>
+
+<div class="dblock">
+
+    <label>Identifiant :</label>
+    <input type="text">
+
+    <label>Mot de passe :</label>
+    <input [type]="passwordType">
+
+    <label><input type="checkbox" (input)="toggleVisiblePassword()"> Afficher le mot de passe</label>
+
+    <button>Connexion</button>
+
+</div>
