@@ -29,6 +29,7 @@ import { Demo20Component } from './demos/demo20/demo20.component';
 import { Demo21Component } from './demos/demo21/demo21.component';
 import { DemosComponent } from './demos/demos.component';
 
+import { UserResolver } from './demos/demo18/user.resolver';
 import { ExercicesComponent } from './exercices/exercices.component';
 import { Exo01Component } from './exercices/exo01/exo01.component';
 import { Exo02Component } from './exercices/exo02/exo02.component';
@@ -70,6 +71,7 @@ const routes: Routes = [
         ]
       },
       { path: 'demo18', component: Demo18Component },
+      { path: 'demo18/:id', component: Demo18Component, resolve: { user: UserResolver } },
       { path: 'demo19', component: Demo19Component },
       { path: 'demo20', component: Demo20Component },
       { path: 'demo21', component: Demo21Component },
