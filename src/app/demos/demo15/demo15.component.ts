@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { nameValidator } from './Validators/name.validators';
 import { emailValidator } from './Validators/email.validators';
+import { nameValidator } from './Validators/name.validators';
 import { twoPasswordCheckValidator } from './Validators/twoPasswordValidate.validators';
 
 @Component({

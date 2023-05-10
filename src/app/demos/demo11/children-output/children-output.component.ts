@@ -11,7 +11,7 @@ export class ChildrenOutputComponent {
 
   messageFromChild: string = "Mon message";
 
-  onEmit(): void {
+  onEmit (): void {
     this.emitToParent.emit(this.messageFromChild);
   }
 

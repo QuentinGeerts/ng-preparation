@@ -13,7 +13,7 @@ export class Demo01Component {
 
   maVariable4: null = null;
   maVariable5: undefined = undefined;
-  maVariable6: any[] = ["Chaine de caractères", 12, true, () => { console.log('Heyo') }];
+  maVariable6: any[] = ["Chaine de caractères", 12, true, () => { console.log('Heyo'); }];
   maVariable7: [string, number] = ["", 3]; // Tuple
 
   ngOnInit (): void {

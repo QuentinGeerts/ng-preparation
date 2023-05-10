@@ -18,7 +18,7 @@ export class Demo04Component {
 
   rangeValue: number = this.min;
 
-  changeValue(): void {
+  changeValue (): void {
     this.maVariable = 42;
   }
 

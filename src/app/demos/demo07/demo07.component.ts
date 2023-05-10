@@ -13,6 +13,6 @@ export class Demo07Component {
     { id: '002', nom: 'Santos', prenom: 'Pierre' },
     { id: '003', nom: 'Person', prenom: 'Michaël' },
     { id: '004', nom: 'Legrain', prenom: 'Samuel' },
-  ]
+  ];
 
 }

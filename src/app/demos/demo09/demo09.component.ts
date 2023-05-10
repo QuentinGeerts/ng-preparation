@@ -11,8 +11,8 @@ export class Demo09Component {
   liste: string[] = ["pomme", "poire", "cerise", "pêche", "prune", "orange"];
   inputValue: string = "";
 
-  toggle(): void {
+  toggle (): void {
     this.isToggled = !this.isToggled;
   }
-  
+
 }

@@ -7,15 +7,15 @@ export function twoPasswordCheckValidator (controlGroup: AbstractControl) {
     if (controlGroup.value.password && controlGroup.value.passwordVerify) {
 
         if (controlGroup.value.password !== controlGroup.value.passwordVerify) {
-            return { twoPasswordCheck: "Mots de passe différents" }
+            return { twoPasswordCheck: "Mots de passe différents" };
         }
-        
+
         return null;
-        
+
     }
-    
+
     else {
-        errors = { twoPasswordCheck : "Champ obligatoire" }
+        errors = { twoPasswordCheck: "Champ obligatoire" };
         return errors;
     }
 

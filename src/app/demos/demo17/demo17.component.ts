@@ -11,7 +11,7 @@ export class Demo17Component implements OnInit {
   isConnected: boolean = false;
 
   constructor (private _loginService: LoginService) { }
-  
+
   ngOnInit (): void {
     this.isConnected = this._loginService.isConnected;
   }
@@ -20,7 +20,7 @@ export class Demo17Component implements OnInit {
     this._loginService.logIn();
     this.isConnected = this._loginService.isConnected;
   }
-  
+
   logout (): void {
     this._loginService.logOut();
     this.isConnected = this._loginService.isConnected;

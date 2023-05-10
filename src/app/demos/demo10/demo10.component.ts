@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 })
 export class Demo10Component {
 
-  color: string = "red"
+  color: string = "red";
 
 }

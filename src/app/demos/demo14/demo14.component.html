@@ -42,31 +42,34 @@
 
         <div class="dblock">
             <label for="name">Name :</label>
-            <input type="text" id="name" formControlName="name" [ngClass]="{error : myForm.controls['name'].touched && !myForm.controls['name'].valid}">
+            <input type="text" id="name" formControlName="name"
+                [ngClass]="{error : myForm.controls['name'].touched && !myForm.controls['name'].valid}">
 
             <span *ngIf="myForm.controls['name'].touched && !myForm.controls['name'].valid" class="error">
                 Requis + caractères entre 3 et 20
             </span>
         </div>
-        
+
         <div class="dblock">
             <label for="email">Email :</label>
-            <input type="email" name="email" id="email" formControlName="email" [ngClass]="{error: !myForm.controls['email'].valid}">
+            <input type="email" name="email" id="email" formControlName="email"
+                [ngClass]="{error: !myForm.controls['email'].valid}">
             <span *ngIf=" myForm.controls['email'].touched && !myForm.controls['email'].valid" class="error">
                 Requis + email format
             </span>
 
         </div>
-        
+
         <div class="dblock">
             <label for="password">Password :</label>
-            <input type="password" name="password" id="password" formControlName="password" [ngClass]="{error: !myForm.controls['password'].valid}">
+            <input type="password" name="password" id="password" formControlName="password"
+                [ngClass]="{error: !myForm.controls['password'].valid}">
             <span *ngIf=" myForm.controls['password'].touched && !myForm.controls['password'].valid" class="error">
                 Requis + caractères entre 6 et 15
             </span>
 
         </div>
-        
+
         <div class="dblock">
             <label for="gender">Gender :</label>
             <select formControlName="gender" id="gender">
@@ -83,7 +86,7 @@
             Envoyer
         </button>
 
-        
+
         <h3>Form Control (abtractControl) :</h3>
         <span *ngIf="myForm.pristine">(pristine)</span>&nbsp;
         <span *ngIf="myForm.touched">(touched)</span>&nbsp;

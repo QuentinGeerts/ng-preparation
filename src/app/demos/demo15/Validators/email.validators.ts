@@ -6,7 +6,7 @@ export function emailValidator (control: AbstractControl) {
 
     if (control.value) {
 
-        
+
         if (control.value.length <= 5) {
             error = { name: 'Votre email doit contenir au moins 6 caractères' };
             return error;

@@ -12,7 +12,7 @@ export class Demo02Component {
   maVariable3: boolean = false;
 
   // Après avoir vu l'Event Binding
-  changeValue(text: KeyboardEvent | any) {
+  changeValue (text: KeyboardEvent | any) {
     console.log("Called: ", text.target.value);
     this.maVariable1 = text.target.value;
   }

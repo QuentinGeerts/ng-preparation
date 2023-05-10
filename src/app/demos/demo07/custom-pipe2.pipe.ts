@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class CustomPipe2Pipe implements PipeTransform {
 
-  transform(value: any[], id: string, prop: string): any {
+  transform (value: any[], id: string, prop: string): any {
     if (!Array.isArray(value)) {
       return value;
     }

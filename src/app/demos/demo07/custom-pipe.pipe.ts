@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class CustomPipePipe implements PipeTransform {
 
-  transform(value: number): string {
+  transform (value: number): string {
 
     let jours = Math.floor(value / 86400);
     value = value - (jours * 86400);
@@ -19,7 +19,7 @@ export class CustomPipePipe implements PipeTransform {
     let secondes = value;
 
 
-    let format = ""
+    let format = "";
 
     format += `${jours} ${jours > 1 ? 'jours' : 'jour'}, `;
     format += `${heures < 10 ? '0' + heures : heures} ${heures > 1 ? 'heures' : 'heure'}, `;

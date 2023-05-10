@@ -15,12 +15,12 @@ export class Demo08Component {
 
   isActive: boolean = false;
 
-  constructor() { }
+  constructor () { }
 
-  ngOnInit(): void {
+  ngOnInit (): void {
   }
 
-  setCurrentStyle() {
+  setCurrentStyle () {
     this.currentStyle = {
       'font-style': this.italic ? 'italic' : 'normal',
       'font-weight': this.bold ? 'bold' : 'normal',
@@ -28,22 +28,22 @@ export class Demo08Component {
     };
   }
 
-  switchItalic() {
+  switchItalic () {
     this.italic = !this.italic;
     this.setCurrentStyle();
   }
 
-  switchBold() {
+  switchBold () {
     this.bold = !this.bold;
     this.setCurrentStyle();
   }
 
-  switchSize() {
+  switchSize () {
     this.size = !this.size;
     this.setCurrentStyle();
   }
 
-  switchClass() {
+  switchClass () {
     this.isActive = !this.isActive;
   }
 

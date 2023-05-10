@@ -10,27 +10,27 @@ export class Demo03Component {
   nombre1: number = 0;
   nombre2: number = 0;
 
-  increase1(): void {
+  increase1 (): void {
     this.nombre1++;
   }
 
-  decrease1(): void {
+  decrease1 (): void {
     this.nombre1--;
   }
 
-  reset1(): void {
+  reset1 (): void {
     this.nombre1 = 0;
   }
- 
-  increase2(): void {
+
+  increase2 (): void {
     this.nombre2++;
   }
 
-  decrease2(): void {
+  decrease2 (): void {
     this.nombre2--;
   }
 
-  reset2(): void {
+  reset2 (): void {
     this.nombre2 = 0;
   }
 
