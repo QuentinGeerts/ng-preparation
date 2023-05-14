@@ -1,5 +1,10 @@
 <h2>Demo 20 - Les Observables</h2>
 
+<p>
+    Les observables sont des objets qui représentent une séquence de valeurs qui peuvent être émises au fil du temps.
+    Les observables sont utilisés pour la gestion des événements et des données asynchrones dans les applications.
+</p>
+
 <p>Statut de connexion : {{ isConnected }}</p>
 <button (click)="login()" *ngIf="!isConnected">Se connecter</button>
 <button (click)="logout()" *ngIf="isConnected">Se déconnecter</button>
