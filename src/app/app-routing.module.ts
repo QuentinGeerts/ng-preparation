@@ -32,6 +32,9 @@ import { canActivateChildGuard } from './demos/demo17/guard/can-activate-child.g
 import { canDesactivateGuard } from './demos/demo17/guard/can-desactivate.guard';
 import { isauthGuard } from './demos/demo17/guard/isauth.guard';
 import { UserResolver } from './demos/demo18/user.resolver';
+import { AddComponent } from './demos/demo21/add/add.component';
+import { EditComponent } from './demos/demo21/edit/edit.component';
+import { Demo22Component } from './demos/demo22/demo22.component';
 import { ExercicesComponent } from './exercices/exercices.component';
 import { Exo01Component } from './exercices/exo01/exo01.component';
 import { Exo02Component } from './exercices/exo02/exo02.component';
@@ -78,7 +81,14 @@ const routes: Routes = [
       { path: 'demo18/:id', component: Demo18Component, resolve: { user: UserResolver } },
       { path: 'demo19', component: Demo19Component },
       { path: 'demo20', component: Demo20Component },
-      { path: 'demo21', component: Demo21Component },
+      {
+        path: 'demo21', children: [
+          { path: '', component: Demo21Component },
+          { path: 'add', component: AddComponent },
+          { path: 'update/:id', component: EditComponent },
+        ]
+      },
+      { path: 'demo22', component: Demo22Component },
 
       { path: 'routage', component: Demo16Component },
       { path: 'routage/:id', component: Demo16Component },

@@ -63,9 +63,12 @@ import { Exo09Component } from './exercices/exo09/exo09.component';
 import { Exo10Component } from './exercices/exo10/exo10.component';
 import { Exo21Component } from './exercices/exo21/exo21.component';
 
-import { HttpClientModule } from '@angular/common/http';
-import { DetailsComponent } from './exercices/exo21/details/details.component';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { AddComponent } from './demos/demo21/add/add.component';
+import { EditComponent } from './demos/demo21/edit/edit.component';
 import { Demo22Component } from './demos/demo22/demo22.component';
+import { TokenInterceptor } from './demos/demo22/token.interceptor';
+import { DetailsComponent } from './exercices/exo21/details/details.component';
 
 @NgModule({
   declarations: [
@@ -126,6 +129,8 @@ import { Demo22Component } from './demos/demo22/demo22.component';
     Exo21Component,
     DetailsComponent,
     Demo22Component,
+    AddComponent,
+    EditComponent,
   ],
   imports: [
     BrowserModule,
@@ -134,7 +139,13 @@ import { Demo22Component } from './demos/demo22/demo22.component';
     ReactiveFormsModule, // Important pour le fonctionnement du FormGroup
     HttpClientModule, // Module permettant la communication avec un API
   ],
-  providers: [],
+  providers: [
+    // provide: indique que vous souhaitez enregistrer un intercepteur pour les requêtes HTTP
+    // useClasse: la classe de votre intercepteur personnalisé qu'on souhaite utiliser
+    // multi: enregistrer plusieurs intercepteurs de type HTTP_INTERCEPTORS
+    // • true : vous pouvez enregistrer plusieurs intercepteurs dans le même prodiver
+    { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
