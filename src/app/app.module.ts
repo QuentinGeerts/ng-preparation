@@ -65,6 +65,7 @@ import { Exo21Component } from './exercices/exo21/exo21.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { DetailsComponent } from './exercices/exo21/details/details.component';
+import { Demo22Component } from './demos/demo22/demo22.component';
 
 @NgModule({
   declarations: [
@@ -124,6 +125,7 @@ import { DetailsComponent } from './exercices/exo21/details/details.component';
     ConvertisseurDegrePipe,
     Exo21Component,
     DetailsComponent,
+    Demo22Component,
   ],
   imports: [
     BrowserModule,

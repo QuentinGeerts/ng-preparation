@@ -1,1 +1,7 @@
 <h2>Demo 20 - Les Observables</h2>
+
+<p>Statut de connexion : {{ isConnected }}</p>
+<button (click)="login()" *ngIf="!isConnected">Se connecter</button>
+<button (click)="logout()" *ngIf="isConnected">Se déconnecter</button>
+
+<p>Modification de la barre de navigation pour ajouter le "Connecté" / "Déconnecté"</p>
