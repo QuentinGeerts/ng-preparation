@@ -24,8 +24,12 @@ export class Demo19Component {
     this.savedUsernameLocal = this.localStorageService.getItem('usernameLocal');
   }
 
-  clearLocal () {
+  removeLocal () {
     this.localStorageService.removeItem('usernameLocal');
+  }
+
+  clearLocal () {
+    this.localStorageService.clear();
   }
 
   // SessionStorage
@@ -41,8 +45,12 @@ export class Demo19Component {
     this.savedUsernameSession = this.sessionStorageService.getItem('usernameSession');
   }
 
-  clearSession () {
+  removeSession () {
     this.sessionStorageService.removeItem('usernameSession');
+  }
+
+  clearSession () {
+    this.sessionStorageService.clear();
   }
 
 }

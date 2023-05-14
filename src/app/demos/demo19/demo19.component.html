@@ -11,8 +11,9 @@
 <input [(ngModel)]="usernameLocal" placeholder="Enter your username">
 <button (click)="saveLocal()">Save</button>
 <button (click)="loadLocal()">Load</button>
+<button (click)="removeLocal()">Remove a key</button>
 <button (click)="clearLocal()">Clear</button>
-<p>Username: {{savedUsernameLocal}}</p>
+<p>Username: {{ savedUsernameLocal }}</p>
 
 
 <h3>SessionStorage :</h3>
@@ -25,5 +26,6 @@
 <input [(ngModel)]="usernameSession" placeholder="Enter your username">
 <button (click)="saveSession()">Save</button>
 <button (click)="loadSession()">Load</button>
+<button (click)="removeSession()">Remove a key</button>
 <button (click)="clearSession()">Clear</button>
-<p>Username: {{savedUsernameSession}}</p>
+<p>Username: {{ savedUsernameSession }}</p>
