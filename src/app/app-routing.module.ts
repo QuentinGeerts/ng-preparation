@@ -22,13 +22,13 @@ import { Demo15Component } from './demos/demo15/demo15.component';
 import { Demo16Component } from './demos/demo16/demo16.component';
 import { Demo17Component } from './demos/demo17/demo17.component';
 import { Demo17guardedComponent } from './demos/demo17/demo17guarded/demo17guarded.component';
-import { LoginGuard } from './demos/demo17/guard/login.guard';
 import { Demo18Component } from './demos/demo18/demo18.component';
 import { Demo19Component } from './demos/demo19/demo19.component';
 import { Demo20Component } from './demos/demo20/demo20.component';
 import { Demo21Component } from './demos/demo21/demo21.component';
 import { DemosComponent } from './demos/demos.component';
 
+import { isauthGuard } from './demos/demo17/guard/isauth.guard';
 import { UserResolver } from './demos/demo18/user.resolver';
 import { ExercicesComponent } from './exercices/exercices.component';
 import { Exo01Component } from './exercices/exo01/exo01.component';
@@ -68,7 +68,7 @@ const routes: Routes = [
       {
         path: 'demo17', children: [
           { path: '', component: Demo17Component },
-          { path: 'demo17guarded', component: Demo17guardedComponent, canActivate: [LoginGuard] }
+          { path: 'demo17guarded', component: Demo17guardedComponent, canActivate: [isauthGuard] }
         ]
       },
       { path: 'demo18', component: Demo18Component },
