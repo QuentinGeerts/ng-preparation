@@ -1,0 +1,16 @@
+<div *ngIf="currentPokemon">
+    <h3>
+        Détails de {{ currentPokemon.name | titlecase }}
+    </h3>
+
+    <img [src]="currentPokemon.sprites.front_default">
+    <img [src]="currentPokemon.sprites.back_default">
+
+    <p>Poids : {{ currentPokemon.weight }} kg</p>
+    <p>Taille : {{ currentPokemon.height / 10 }} m</p>
+
+    <h4>Artworks :</h4>
+
+    <img class="artwork" [src]="currentPokemon.sprites.other['official-artwork'].front_default">
+    <img class="artwork" [src]="currentPokemon.sprites.other['official-artwork'].front_shiny">
+</div>

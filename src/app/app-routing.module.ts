@@ -28,6 +28,8 @@ import { Demo20Component } from './demos/demo20/demo20.component';
 import { Demo21Component } from './demos/demo21/demo21.component';
 import { DemosComponent } from './demos/demos.component';
 
+import { canActivateChildGuard } from './demos/demo17/guard/can-activate-child.guard';
+import { canDesactivateGuard } from './demos/demo17/guard/can-desactivate.guard';
 import { isauthGuard } from './demos/demo17/guard/isauth.guard';
 import { UserResolver } from './demos/demo18/user.resolver';
 import { ExercicesComponent } from './exercices/exercices.component';
@@ -43,6 +45,7 @@ import { Exo08Component } from './exercices/exo08/exo08.component';
 import { Exo09Component } from './exercices/exo09/exo09.component';
 import { Exo10Component } from './exercices/exo10/exo10.component';
 import { Exo11Component } from './exercices/exo11/exo11.component';
+import { Exo21Component } from './exercices/exo21/exo21.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -66,8 +69,8 @@ const routes: Routes = [
       { path: 'demo15', component: Demo15Component },
       { path: 'demo16', component: Demo16Component },
       {
-        path: 'demo17', children: [
-          { path: '', component: Demo17Component },
+        path: 'demo17', canActivateChild: [canActivateChildGuard], children: [
+          { path: '', component: Demo17Component, canDeactivate: [canDesactivateGuard] },
           { path: 'demo17guarded', component: Demo17guardedComponent, canActivate: [isauthGuard] }
         ]
       },
@@ -96,6 +99,7 @@ const routes: Routes = [
       { path: 'exo09', component: Exo09Component },
       { path: 'exo10', component: Exo10Component },
       { path: 'exo11', component: Exo11Component },
+      { path: 'exo21', component: Exo21Component },
     ]
   },
 

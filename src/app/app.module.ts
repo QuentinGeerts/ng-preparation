@@ -54,13 +54,17 @@ import { Exo05Component } from './exercices/exo05/exo05.component';
 import { Exo06Component } from './exercices/exo06/exo06.component';
 import { ChronoPipe } from './exercices/exo07/chrono.pipe';
 import { Exo07Component } from './exercices/exo07/exo07.component';
-import { Exo08Component } from './exercices/exo08/exo08.component';
-import { Exo09Component } from './exercices/exo09/exo09.component';
-import { Exo10Component } from './exercices/exo10/exo10.component';
+import { ConvertisseurDegrePipe } from './exercices/exo07dot2/convertisseur-degre.pipe';
 import { Exo07dot2Component } from './exercices/exo07dot2/exo07dot2.component';
 import { ToCelsiusPipe } from './exercices/exo07dot2/to-celsius.pipe';
 import { ToFahrenheitPipe } from './exercices/exo07dot2/to-fahrenheit.pipe';
-import { ConvertisseurDegrePipe } from './exercices/exo07dot2/convertisseur-degre.pipe';
+import { Exo08Component } from './exercices/exo08/exo08.component';
+import { Exo09Component } from './exercices/exo09/exo09.component';
+import { Exo10Component } from './exercices/exo10/exo10.component';
+import { Exo21Component } from './exercices/exo21/exo21.component';
+
+import { HttpClientModule } from '@angular/common/http';
+import { DetailsComponent } from './exercices/exo21/details/details.component';
 
 @NgModule({
   declarations: [
@@ -118,12 +122,15 @@ import { ConvertisseurDegrePipe } from './exercices/exo07dot2/convertisseur-degr
     ToCelsiusPipe,
     ToFahrenheitPipe,
     ConvertisseurDegrePipe,
+    Exo21Component,
+    DetailsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule, // Important pour le fonctionnement du Two-Way Binding
     ReactiveFormsModule, // Important pour le fonctionnement du FormGroup
+    HttpClientModule, // Module permettant la communication avec un API
   ],
   providers: [],
   bootstrap: [AppComponent]
