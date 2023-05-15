@@ -69,6 +69,9 @@ import { EditComponent } from './demos/demo21/edit/edit.component';
 import { Demo22Component } from './demos/demo22/demo22.component';
 import { TokenInterceptor } from './demos/demo22/token.interceptor';
 import { DetailsComponent } from './exercices/exo21/details/details.component';
+import { Exo15Component } from './exercices/exo15/exo15.component';
+import { Exo12Component } from './exercices/exo12/exo12.component';
+import { ShoppingListComponent } from './exercices/exo12/shopping-list/shopping-list.component';
 
 @NgModule({
   declarations: [
@@ -131,6 +134,9 @@ import { DetailsComponent } from './exercices/exo21/details/details.component';
     Demo22Component,
     AddComponent,
     EditComponent,
+    Exo15Component,
+    Exo12Component,
+    ShoppingListComponent,
   ],
   imports: [
     BrowserModule,
